@@ -1,0 +1,15 @@
+{
+  "name": "unicode-ts",
+  "version": "1.0.0",
+  "description": "unicode utilities for typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["unicode"],
+  "author": "Kyle Gwinnup",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
