@@ -26,7 +26,6 @@ export class UnicodeSet {
             this.charSurrogateRange = surrogateRange;
         }
         this._buildTables(true);
-        throw new Error("foobar")
     }
 
     public lookup(char: number, nextChar?: number): boolean {

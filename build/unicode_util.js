@@ -21,7 +21,6 @@ class UnicodeSet {
             this.charSurrogateRange = surrogateRange;
         }
         this._buildTables(true);
-        throw new Error("foobar");
     }
     lookup(char, nextChar) {
         if (char < this.fastTableSize) {

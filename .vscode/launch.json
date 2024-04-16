@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Jest Tests",
+            "name": "Run Tests",
             "type": "node",
             "request": "launch",
             "runtimeArgs": [
@@ -12,6 +12,7 @@
                 "--coverage",
                 "false"
             ],
+            "preLaunchTask": "npm: build",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         }
