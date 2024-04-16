@@ -1,3 +1,5 @@
+[![JSR](https://jsr.io/badges/@kgwinnup/unicode)](https://jsr.io/@kgwinnup/unicode)
+
 # Unicode library for javascript/typescript
 
 This is an export of the unicode typescript helpers built into the
