@@ -1,5 +1,5 @@
-import { Char } from "./chars";
-import * as unicode from "./unicode";
+import { Char } from './chars';
+import * as unicode from './unicode';
 
 enum CharCategory {
     InvalidChar = 0,
@@ -11,7 +11,7 @@ type CharCategoryMap = {
     [code: number]: CharCategory;
 };
 
-export class UnicodeSet {
+export class Unicode {
     charRange: unicode.UnicodeRangeTable[] = new Array();
     charSurrogateRange: unicode.UnicodeSurrogateRangeTable[] = new Array();
     fastTableSize: number = 256;
@@ -26,6 +26,22 @@ export class UnicodeSet {
             this.charSurrogateRange = surrogateRange;
         }
         this._buildTables(true);
+    }
+
+    static isNumber(char: number): boolean {
+        return char >= Char._0 && char <= Char._9;
+    }
+
+    static isHex(char: number): boolean {
+        return Unicode.isNumber(char) || (char >= Char.a && char <= Char.f) || (char >= Char.A && char <= Char.F);
+    }
+
+    static isOctal(ch: number): boolean {
+        return ch >= Char._0 && ch <= Char._7;
+    }
+
+    static isBinary(ch: number): boolean {
+        return ch === Char._0 || ch === Char._1;
     }
 
     public lookup(char: number, nextChar?: number): boolean {
