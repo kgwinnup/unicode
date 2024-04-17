@@ -10,10 +10,9 @@ various unicode sets.
 # Usage
 
 ```
-import { unicodeLu, unicodeLo } from './unicode';
-import { Unicode } from './unicode_util';
+import { Unicode, UnicodeCategory } from "@kgwinnup/unicode";
 
-const uc = new Unicode([unicodeLu, unicodeLo]);
+const uc = new Unicode([UnicodeCategory.unicodeLu]);
 if (uc.lookup('A'.charCodeAt(0)) == true) {
     console.log("part of set")
 }
