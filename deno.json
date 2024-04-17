@@ -1,0 +1,10 @@
+{
+  "name": "@kgwinnup/unicode",
+  "version": "0.2.3",
+  "exports": "./mod.ts",
+  "tasks": {},
+  "fmt": {
+    "lineWidth": 120,
+    "indentWidth": 4
+  }
+}
