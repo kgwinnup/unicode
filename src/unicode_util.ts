@@ -1,5 +1,5 @@
 import { Char } from "./chars.ts";
-import * as unicode from "./unicode.ts";
+import type * as unicode from "./unicode.ts";
 
 enum CharCategory {
     InvalidChar = 0,
@@ -12,8 +12,8 @@ type CharCategoryMap = {
 };
 
 export class Unicode {
-    charRange: unicode.UnicodeRangeTable[] = new Array();
-    charSurrogateRange: unicode.UnicodeSurrogateRangeTable[] = new Array();
+    charRange: unicode.UnicodeRangeTable[] = [];
+    charSurrogateRange: unicode.UnicodeSurrogateRangeTable[] = [];
     fastTableSize: number = 256;
     fastTable: CharCategory[] = new Array(this.fastTableSize);
     fullTable: CharCategoryMap = {};
