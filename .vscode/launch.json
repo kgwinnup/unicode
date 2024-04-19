@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "name": "Debug Tests",
+            "type": "node",
+            //"program": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "runtimeExecutable": "/opt/homebrew/bin/deno",
+            "runtimeArgs": ["test", "--inspect-wait", "--allow-all"],
+            "attachSimplePort": 9229
+        }
+    ]
+}

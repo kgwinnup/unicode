@@ -29,3 +29,38 @@ if (uc.lookup(Char.A) == true) {
     console.log("part of set")
 }
 ```
+
+The lookup function also supports surrogate pairs.
+
+```
+import { Char, Unicode, UnicodeCategory } from "@kgwinnup/unicode";
+
+const uc = new Unicode([UnicodeCategory.Lu, UnicodeCategory.Ll]);
+
+if (uc.lookup('A'.charCodeAt(0)) == true) {
+    console.log("part of set")
+}
+
+if (uc.lookup(Char.A) == true) {
+    console.log("part of set")
+}
+
+const str = "𐐀";
+// UnicodeCategory.L is all letters
+const uc2 = new Unicode([UnicodeCategory.L], [UnicodeCategory.surrogateL]);
+if (uc2.lookup(str.charCodeAt(0), str.charCodeAt(1))) {
+    console.log("part of the set");
+}
+
+// https://www.compart.com/en/unicode/U+10EAD
+// this char should not be a letter
+const str2 = "𐺭";
+if (!uc2.lookup(str2.charCodeAt(0), str2.charCodeAt(1))) {
+    console.log("should not be part of the set")
+}
+
+// you can also check if the first char is a surrogate char
+if (uc.isSurrogate(str2.charCodeAt(0))) {
+    console.log("should be a surrogate char")
+}
+```
