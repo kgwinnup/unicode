@@ -3,7 +3,7 @@
 # Unicode library for javascript/typescript
 
 This is a library that enables unicode category matching. This will provide efficient lookup of character sets and
-lazily build out all tables as needed. The primary purose of this unicode library is for writing parsers that need to
+lazily build out all tables as needed. The primary purpose of this unicode library is for writing parsers that need to
 understand unicode. The example below creates a set of unicode categories that could be used for say "identifiers" or
 "start identifiers".
 
