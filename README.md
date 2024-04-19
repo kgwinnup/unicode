@@ -17,7 +17,7 @@ package.
 ```
 import { Char, Unicode, UnicodeCategory } from "@kgwinnup/unicode";
 
-const uc = new Unicode([UnicodeCategory.L]);
+const uc = new Unicode([UnicodeCategory.Lu, UnicodeCategory.Ll]);
 
 if (uc.lookup('A'.charCodeAt(0)) == true) {
     console.log("part of set")
