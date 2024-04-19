@@ -1,6 +1,8 @@
-type UnicodeRange = [number, number] | number;
-type UnicodeRangeTable = UnicodeRange[];
-type UnicodeSurrogateRangeTable = {
+export { Ll, Lu, surrogateLl, surrogateLu } from "./unicode2.ts";
+
+export type UnicodeRange = [number, number] | number;
+export type UnicodeRangeTable = UnicodeRange[];
+export type UnicodeSurrogateRangeTable = {
     [surrogate: number]: UnicodeRange[];
 };
 export const Cc: UnicodeRangeTable = [

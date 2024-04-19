@@ -170,9 +170,9 @@ async function main() {
         }
     }
 
-    let out = `type UnicodeRange = [number, number] | number;
-    type UnicodeRangeTable = UnicodeRange[];
-    type UnicodeSurrogateRangeTable = {
+    let out = `export type UnicodeRange = [number, number] | number;
+    export type UnicodeRangeTable = UnicodeRange[];
+    export type UnicodeSurrogateRangeTable = {
         [surrogate: number]: UnicodeRange[];
     };\n`;
 
