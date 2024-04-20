@@ -1,4 +1,4 @@
-export { Ll, Lu, surrogateLl, surrogateLu } from "./unicode2.ts";
+export { Ll, Lt, Lu, surrogateLl, surrogateLu } from "./unicode2.ts";
 
 export type UnicodeRange = [number, number] | number;
 export type UnicodeRangeTable = UnicodeRange[];

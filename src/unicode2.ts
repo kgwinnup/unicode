@@ -1430,3 +1430,16 @@ export const surrogateLl: UnicodeSurrogateRangeTable = {
         [0xdd22, 0xdd43], // 0x1E922..0x1E943
     ],
 };
+
+export const Lt: UnicodeRangeTable = [
+    0x01c5,
+    0x01c8,
+    0x01cb,
+    0x01f2,
+    [0x1f88, 0x1f8f],
+    [0x1f98, 0x1f9f],
+    [0x1fa8, 0x1faf],
+    0x1fbc,
+    0x1fcc,
+    0x1ffc,
+];
