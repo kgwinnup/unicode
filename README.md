@@ -7,8 +7,6 @@ lazily build out all tables as needed. The primary purpose of this unicode libra
 understand unicode. The example below creates a set of unicode categories that could be used for say "identifiers" or
 "start identifiers".
 
-**Why another unicode library?**
-
 This library is intended to be used for writing parsers. When writing a parser it is often useful to designate a set of
 unicode characters for the start of an identity and another set for the remainder of the identity. This library is
 written with that in mind and functions to lazily build the surrogate and larger unicode sets only when needed and only
